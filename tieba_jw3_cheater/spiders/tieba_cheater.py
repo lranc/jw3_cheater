@@ -124,7 +124,7 @@ class Tieba_CheaterSpider(CrawlSpider):
 				reply_content = data_dict['content']['content']
 				#reply_content=i.xpath('.//div[@class="post_bubble_middle_inner"]/text()').extract()+i.xpath('.//div[@id="post_content_%s"]/text()'% post_id).extract()
 				#image_url = i.xpath('.//div[@class="post_bubble_middle_inner"]/img/@src').extract()+i.xpath('.//div[@id="post_content_%s"]/img/@src'% post_id).extract()
-				floor_time = i.xpath('.//div[@class="post-tail-wrap"]/span[class="tail-info"][-1]/text()').extract()[0]
+				floor_time = i.xpath('.//div[@class="post-tail-wrap"]/span[class="tail-info"][last()]/text()')[0]
 				CheaterItem = TiebaCheaterItem(cheater_url=cheater_url,
 												post_title=post_title,
 												url_id=url_id,
