@@ -25,7 +25,7 @@ with open('noises_id_list.txt','r') as f:
 	NOISES_ID_LIST=numpy.array([x.split(',') for x in f.readlines()][0])
 	#print(noises_id_list)
 	#noises_id_list=[x.strip() for x in f.readlines()] #加载本地噪点url
-LOG_LEVEL = 'INFO'
+LOG_LEVEL = 'WARNING'
 LOG_FILE='spider.log'
 COOKIES_ENABLED = False
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
